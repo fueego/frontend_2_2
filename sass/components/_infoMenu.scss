@@ -1,0 +1,140 @@
+
+.info {
+    font-size: 1.6rem;
+
+    // 3. hide checkbox
+    &__checkbox {
+        display: none;
+    }
+
+    // 2. define checkbox
+    &__button {
+        background-color: $lightGray;
+        height: 5rem;
+        width: 5rem;
+        position: fixed;
+        top: 4rem;
+        right: 4rem;
+        border-radius: 50%;
+        color: $gray;
+        font-size: 3rem;
+        line-height: 4.5rem;
+        text-align: center;
+        z-index: 102;
+        box-shadow: 0 1rem 3rem rgba(#000, .1);
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // 1. define background under checkbox
+    &__background {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 4.5rem;
+        right: 4.5rem;
+        background-image: radial-gradient($orange, $red);
+        z-index: 100;
+
+        transition: all .4s;
+    }
+
+    // 4. take care about description part
+    &__description {
+        color: #fff;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 101;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        opacity: 0;
+        width: 0;
+
+        transition: all .3s;
+
+        .title {
+            font-size: 3rem;
+            margin: 2rem 0;
+        }
+
+        .content {
+            width: 50vw;
+            font-size: 2rem;
+        }
+    }
+
+    // 5. Place where magic happen ;) when we are using checked property from checkbox
+    &__checkbox:checked ~ &__background{
+        transform: scale(90);
+    }
+
+    &__checkbox:checked ~ &__description {
+        opacity: 1;
+        width: 100vw;
+    }
+
+    // 6. add Info menu icons
+    &__icon {
+        position: relative;
+
+        &,
+        &::before,
+        &::after {
+            width: 2rem;
+            height: .2rem;
+            background: $gray;
+            display: block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            
+            transition: all .2s;
+        }
+
+        &::before {
+            top: -.6rem;
+        }
+
+        &::after {
+            top: .6rem;
+        }
+    }
+
+    // 7: add hover effects for the icons
+    &__button:hover &__icon::before {
+        top: -.8rem;
+    }
+
+    &__button:hover > &__icon::after {
+        top: .8rem;
+    }
+
+    // 8: make cross once checkbox is clicked
+    &__checkbox:checked + &__button > &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__button > &__icon::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    &__checkbox:checked + &__button > &__icon::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+}
