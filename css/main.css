@@ -1,7 +1,24 @@
 html {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-size: 62.5%;
+  /* font-size 1em = 10px on default browser settings */ }
 
 body {
   background: linear-gradient(135deg, #ffaf1b, #ff2424);
   height: 100vh; }
+
+span {
+  font-size: 1.6rem; }
+
+.head {
+  background: red;
+  padding: 1rem; }
+
+.main {
+  padding: .5rem 1rem;
+  background-color: white; }
+
+.half-width-center, .head, .main, .footer {
+  width: 50vw;
+  margin: 0 auto; }

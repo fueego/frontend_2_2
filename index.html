@@ -9,7 +9,83 @@
 </head>
 <body>
 
+    <section class="info">
+        <!-- TODO: top right side "help" or "info" section with details about game -->
+    </section>
 
-    
+    <header>
+        <section class="head">
+            <!-- TODO: Head part, define score ( input field + button ) -->
+            <form action="#">
+                <input type="text" name="score" placeholder="Max score">
+                <button class="btn btn--primary">Save</button>
+            </form>
+        </section>
+    </header>
+
+    <main> 
+        <section class="main">
+            <!--
+                TODO: 
+                Main section, left side player1, right side player2.
+                Both section have actuall score, 
+            -->
+
+            <div class="player">
+                <div class="player__name">
+                    <span class="player__name--normal">
+                        Player 1
+                    </span>
+                </div>
+
+                <div class="player__score">
+                    <span class="player__score--thin">
+                        30
+                    </span>
+                </div>
+
+                <div class="player__dice"></div>
+
+                <div class="player__action">
+                    <button class="btn btn--default">Take</button>
+                    <button class="btn btn--primary">Play</button>
+                </div>
+            </div>
+
+            <div class="player">
+                <div class="player__name">
+                    <span class="player__name--normal">
+                        Player 2
+                    </span>
+                </div>
+
+                <div class="player__score">
+                    <span class="player__score--thin">
+                        20
+                    </span>
+                </div>
+
+                <div class="player__dice"></div>
+
+                <div class="player__action">
+                    <button class="btn btn--default">
+                        Take
+                    </button>
+
+                    <button class="btn btn--primary">
+                        Play
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <button class="btn btn--warning">
+                Reset
+            </button>
+        </div>
+    </footer>
 </body>
 </html>
