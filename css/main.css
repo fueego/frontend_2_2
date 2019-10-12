@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 html {
   margin: 0;
   padding: 0;
@@ -6,7 +7,8 @@ html {
 
 body {
   background: linear-gradient(135deg, #ffaf1b, #ff2424);
-  height: 100vh; }
+  height: 100vh;
+  font-family: 'Lato', sans-serif; }
 
 span {
   font-size: 1.6rem; }
