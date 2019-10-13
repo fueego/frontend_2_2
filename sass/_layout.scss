@@ -15,11 +15,19 @@ span {
     font-size: 1.6rem;
 }
 
-.head {
-    @extend .half-width-center;
-    background: red;
-    padding: 1rem;
+header {
+    margin-top: 4rem;
+
+    .head {
+        @extend .half-width-center;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
 }
+
 
 .main {
     @extend .half-width-center;

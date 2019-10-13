@@ -1,0 +1,69 @@
+.btn {
+    min-width: 12rem;
+    min-height: 3rem;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    transition: all .2s;
+    position: relative;
+    outline: none;
+    border: 0;
+    font-weight: 400;
+
+    &--primary {
+        color: $darkGrey;
+        background-color: $primary;
+    }
+
+    &--default {
+        color: $darkGrey;
+        background-color: $lightGray;
+    }
+
+    &--warning {
+        color: #fff;
+        background-color: $red;
+    }
+    
+    // after mouse hover ( :xyz, pseudo-class )
+    &:hover {
+        box-shadow: 0 .5rem 1rem rgba(#000, .1);
+        transform: translateY(-1px);
+    }
+
+    // after mouse click
+    &:active {
+        transform: translateY(-.5px);
+    }
+
+    // adding nice effect ( ::xyz, pseudo-element )
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: .5rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    &--primary::after {
+        background-color: $primary;
+    }
+
+    &--default::after {
+        background-color: $lightGray;
+    }
+
+    &--warning::after {
+        background-color: $red;
+    }
+
+    &:hover::after {
+        transition: all .5s;
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
