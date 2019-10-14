@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato:100,400&display=swap");
 html {
-  margin: 0;
-  padding: 0;
   font-size: 62.5%;
   /* font-size 1em = 10px on default browser settings */ }
 
 body {
+  margin: 0;
+  padding: 0;
   background: linear-gradient(135deg, #ffaf1b, #ff2424);
   height: 100vh;
   font-family: 'Lato', sans-serif; }
@@ -14,7 +14,7 @@ span {
   font-size: 1.6rem; }
 
 header {
-  margin-top: 4rem; }
+  padding-top: 6rem; }
   header .head {
     padding: 1rem;
     display: flex;
@@ -22,8 +22,49 @@ header {
     justify-content: center; }
 
 .main {
-  padding: .5rem 1rem;
-  background-color: white; }
+  padding: 3rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 3rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); }
+  .main .player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40rem; }
+    .main .player__name {
+      color: #a7a7a7; }
+      .main .player__name--normal {
+        font-size: 2rem;
+        text-transform: uppercase; }
+    .main .player__score {
+      color: #333;
+      margin: 2rem; }
+      .main .player__score--thin {
+        font-size: 10rem;
+        font-weight: 100; }
+    .main .player__dice img {
+      width: 10rem;
+      border: 1px solid #f7f7f7;
+      border-radius: 6px; }
+    .main .player__dice .current {
+      font-size: 3rem;
+      font-weight: 100;
+      color: #a7a7a7;
+      text-align: center; }
+    .main .player__action {
+      display: flex;
+      flex-direction: column; }
+      .main .player__action button {
+        margin: 1rem 0; }
+
+.footer {
+  display: flex;
+  justify-content: center; }
+  .footer button {
+    margin-top: -1.5rem; }
 
 .half-width-center, header .head, .main, .footer {
   width: 50vw;
@@ -132,7 +173,10 @@ header {
     color: #333;
     background-color: #f7f7f7; }
   .btn--warning {
+    height: 4rem;
+    width: 14rem;
     color: #fff;
+    font-weight: bold;
     background-color: #ff2424; }
   .btn:hover {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);

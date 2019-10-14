@@ -20,7 +20,10 @@
     }
 
     &--warning {
+        height: 4rem;
+        width: 14rem;
         color: #fff;
+        font-weight: bold;
         background-color: $red;
     }
     
