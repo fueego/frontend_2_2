@@ -23,8 +23,20 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
-    }
+        flex-direction: column;
 
+        .max-score {
+            align-self: center;
+            padding: 1.2rem;
+            font-size: 2rem;
+            color: #fff;
+            text-transform: uppercase;
+
+            #score-value {
+                font-size: inherit;
+            }
+        }
+    }
 }
 
 .main {
@@ -47,6 +59,7 @@ header {
 
         &__name {
             color: $gray;
+            text-align: center;
 
             &--normal {
                 font-size: 2rem;

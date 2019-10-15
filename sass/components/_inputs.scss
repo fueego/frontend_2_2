@@ -1,11 +1,23 @@
+@import '../variable';
+
 input[type=text] {
     min-width: 12rem;
     min-height: 3rem;
     border: 0;
     border-radius: .5rem;
     padding: 0 .5rem;
+    background-color: rgba(255, 255, 255, .5);
+
+    &::placeholder {
+        color: #fff;;
+    }
 }
 
 input:focus {
     outline: none;
+    background-color: rgba(255, 255, 255, 1);
+
+    &::placeholder {
+        color: $darkGrey;
+    }
 }
