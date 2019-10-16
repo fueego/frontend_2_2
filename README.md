@@ -11,3 +11,4 @@ Branch list:
 6: initJs
 7: defaultScore
 8: activePlayer
+9: reset
