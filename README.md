@@ -10,3 +10,4 @@ Branch list:
 5: main
 6: initJs
 7: defaultScore
+8: activePlayer
