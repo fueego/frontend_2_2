@@ -8,5 +8,10 @@ export const utils = {
 
     updateElementContent: (element, content) => {
         element.innerHTML = content;
+    },
+
+    setActivePlayer: (playersListArray, activePlayer) => {
+        playersListArray.forEach(className => document.querySelector('.'+className).classList.remove('active'));
+        document.querySelector('.'+playersListArray[activePlayer]).classList.add('active');
     }
 }

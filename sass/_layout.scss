@@ -93,13 +93,26 @@ header {
         }
 
         &__action {
-            display: flex;
+            display: none;
             flex-direction: column;
 
             button {
                 margin: 1rem 0;
             }
         }
+    }
+
+    .active {
+        .player {
+            &__name {
+                color: orangered;
+            }
+
+            &__action {
+                display: flex;
+            }
+        }
+
     }
 }
 

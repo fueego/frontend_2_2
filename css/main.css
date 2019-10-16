@@ -65,10 +65,14 @@ header {
       color: #a7a7a7;
       text-align: center; }
     .main .player__action {
-      display: flex;
+      display: none;
       flex-direction: column; }
       .main .player__action button {
         margin: 1rem 0; }
+  .main .active .player__name {
+    color: orangered; }
+  .main .active .player__action {
+    display: flex; }
 
 .footer {
   display: flex;

@@ -1,5 +1,5 @@
 export const getHeaderFormElements = {
-    maxScoreSaveBtn: document.querySelector('form > button'),
-    maxScoreInput: document.querySelector('form > input'),
-    maxScoreValue: document.getElementById('score-value'),
-}
+    maxScoreSaveBtnElem: document.querySelector('form > button'),
+    maxScoreInputElem: document.querySelector('form > input'),
+    maxScoreValueElem: document.getElementById('score-value'),
+};
