@@ -8,6 +8,7 @@ const activePlayer = utils.randomNumber(0, 1);
 let maxScore = MAX_SCORE;
 
 // Reset all results
+utils.resetPlayersScore();
 
 // Set active class for current player
 utils.setActivePlayer(playersClassName, activePlayer);
@@ -25,4 +26,9 @@ maxScoreSaveBtnElem.addEventListener('click', (e) => {
     // clear input
     maxScoreInputElem.value = '';
     }
+});
+
+// Handle reset btn clikc
+document.querySelector('.footer > .btn').addEventListener('click', () => {
+    utils.resetPlayersScore();
 });

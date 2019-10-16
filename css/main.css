@@ -51,7 +51,8 @@ header {
         text-transform: uppercase; }
     .main .player__score {
       color: #333;
-      margin: 2rem; }
+      margin: 2rem;
+      text-align: center; }
       .main .player__score--thin {
         font-size: 10rem;
         font-weight: 100; }

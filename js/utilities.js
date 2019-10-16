@@ -1,3 +1,5 @@
+import { getMainElements } from './documentRef';
+
 export const utils = {
     randomNumber: (from, to) => {
        const min = Math.ceil(from);
@@ -13,5 +15,11 @@ export const utils = {
     setActivePlayer: (playersListArray, activePlayer) => {
         playersListArray.forEach(className => document.querySelector('.'+className).classList.remove('active'));
         document.querySelector('.'+playersListArray[activePlayer]).classList.add('active');
+    },
+
+    resetPlayersScore: () => {
+        Object.keys(getMainElements).forEach((mainElemsKey) => {
+            getMainElements[mainElemsKey].innerHTML = 0;
+        });
     }
 }
