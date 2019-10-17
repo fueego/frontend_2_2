@@ -1,4 +1,4 @@
-import { getMainElements } from './documentRef';
+import { getPointElements } from './documentRef';
 
 export const utils = {
     randomNumber: (from, to) => {
@@ -14,12 +14,16 @@ export const utils = {
 
     setActivePlayer: (playersListArray, activePlayer) => {
         playersListArray.forEach(className => document.querySelector('.'+className).classList.remove('active'));
-        document.querySelector('.'+playersListArray[activePlayer]).classList.add('active');
+        document.querySelector('.'+playersListArray[activePlayer-1]).classList.add('active');
     },
 
-    resetPlayersScore: () => {
-        Object.keys(getMainElements).forEach((mainElemsKey) => {
-            getMainElements[mainElemsKey].innerHTML = 0;
+    resetView: () => {
+        Object.keys(getPointElements).forEach((mainElemsKey) => {
+            getPointElements[mainElemsKey].innerHTML = 0;
         });
+    },
+
+    getNextPlayer: (activePlayer) => {
+        return activePlayer === 1 ? 2 : 1;
     }
 }
