@@ -12,3 +12,5 @@ Branch list:
 7: defaultScore
 8: activePlayer
 9: reset
+10: takeAndPlayLogic
+11: winner
