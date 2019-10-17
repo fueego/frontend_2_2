@@ -46,6 +46,7 @@ utils.setActivePlayer(playersClassName, activePlayer);
 function takeBtnLogic() {
     const currentElem = document.getElementById(`current-${activePlayer}`);
     const scoreElem = document.getElementById(`score-${activePlayer}`);
+    const playerNameElem = document.querySelector(`.player-${activePlayer} span`);
 
     finalScore[activePlayer-1] += parseInt(currentElem.innerHTML);
     scoreElem.innerHTML = finalScore[activePlayer-1];
@@ -54,7 +55,8 @@ function takeBtnLogic() {
     currentElem.innerHTML = 0;
 
     if ( finalScore[activePlayer-1] >= maxScore ) {
-        console.log('Winner!');
+        playerNameElem.innerHTML = 'Winner!!';
+        document.querySelector(`#action-${activePlayer} .btn--primary`).removeEventListener('click', playBtnLogic);
     } else {
         switchAndActivatePlayer();
     }

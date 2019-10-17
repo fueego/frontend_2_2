@@ -10,3 +10,8 @@ export const getPointElements = {
     player2Score: document.getElementById('score-2'),
     player2Current: document.getElementById('current-2'),
 };
+
+export const playerNamesElements = {
+    player1Name: document.querySelector('.player-1 span'),
+    player2Name: document.querySelector('.player-2 span'),
+};

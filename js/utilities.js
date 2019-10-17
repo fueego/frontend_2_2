@@ -1,4 +1,4 @@
-import { getPointElements } from './documentRef';
+import { getPointElements, playerNamesElements } from './documentRef';
 
 export const utils = {
     randomNumber: (from, to) => {
@@ -18,9 +18,14 @@ export const utils = {
     },
 
     resetView: () => {
+        // reset current and final score
         Object.keys(getPointElements).forEach((mainElemsKey) => {
             getPointElements[mainElemsKey].innerHTML = 0;
         });
+
+        // bring back Player Name
+        playerNamesElements.player1Name.innerHTML = 'Player 1';
+        playerNamesElements.player2Name.innerHTML = 'Player 2';
     },
 
     getNextPlayer: (activePlayer) => {
